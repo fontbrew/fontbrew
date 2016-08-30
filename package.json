@@ -1,0 +1,31 @@
+{
+  "name": "fontbrew",
+  "description": "A cross-platform command-line font manager. Install, update, and remove fonts.",
+  "version": "0.0.1",
+  "homepage": "https://github.com/brennanfee/fontbrew",
+  "repository": "brennanfee/fontbrew",
+  "author": "Brennan A. Fee",
+  "tags": [
+    "font",
+    "brew",
+    "tool"
+  ],
+  "files": [
+      "bin",
+      "fontbrew.1"
+  ],
+  "bin": {
+    "fontbrew": "./bin/fontbrew.js"
+  },
+  "man": "fontbrew.1",
+  "dependencies": {
+    "commander": "^2.9.0"
+  },
+  "devDependencies": {
+    "marked-man": "^0.1.5"
+  },
+  "scripts": {
+      "prepublish": "marked-man --name fontbrew docs/CLI.md > fontbrew.1"
+  },
+  "license": "Unlicense"
+}
